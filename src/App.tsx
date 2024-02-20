@@ -1,10 +1,11 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import "./global.css";
+import "./globals.css";
 import SignIn from "./_auth/forms/SignIn";
 import { Home } from "./_root/pages";
 import Signup from "./_auth/forms/Signup";
 import AuthLayout from "./_auth/AuthLayout";
+import RootLayout from "./_root/RootLayout";
 
 const App = () => {
   return (
@@ -16,7 +17,9 @@ const App = () => {
           <Route path="sign-up" element={<Signup />} />
         </Route>
         {/*Private*/}
-        <Route index element={<Home />} />
+        <Route element={<RootLayout />}>
+          <Route index element={<Home />} />
+        </Route>
       </Routes>
     </main>
   );
