@@ -3,9 +3,10 @@ import { Client, Account, Databases, Storage, Avatars } from "appwrite";
 export const appwriteConfig = {
   projectId: import.meta.env.VITE_APPWRITE_PROJECTID,
   appWriteUrl: import.meta.env.VITE_APPWRITE_URL,
-  usersId: import.meta.env.VITE_APPWRITE_ATTRIBUTE_USERS_ID,
-  postsId: import.meta.env.VITE_APPWRITE_ATTRIBUTE_POSTS_ID,
-  saveId: import.meta.env.VITE_APPWRITE_ATTRIBUTE_SAVE_ID,
+  appWriteDatabaseId: import.meta.env.VITE_APPWRITE_DATABASE_ID,
+  userColectionId: import.meta.env.VITE_APPWRITE_ATTRIBUTE_USERS_ID,
+  postColectionId: import.meta.env.VITE_APPWRITE_ATTRIBUTE_POSTS_ID,
+  saveColectionId: import.meta.env.VITE_APPWRITE_ATTRIBUTE_SAVE_ID,
 };
 
 export const client = new Client();
